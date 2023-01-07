@@ -11,8 +11,7 @@ public class Main {
 		String str = br.readLine();		
 		int sum = 0;
 		
-		for(int i = 0; i < n; i++)
-		{
+		for(int i = 0; i < n; i++){
 			sum += str.charAt(i) - '0';
 		}
 		
