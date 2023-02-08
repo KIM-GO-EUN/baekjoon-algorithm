@@ -9,7 +9,8 @@ class Main{
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int sum = 0; 
         for(int i=0; i<5; i++){
-            sum += Math.pow(Integer.parseInt(st.nextToken()),2);
+            int temp = Integer.parseInt(st.nextToken());
+            sum += temp*temp;
         }
         System.out.println(sum%10);
     }
