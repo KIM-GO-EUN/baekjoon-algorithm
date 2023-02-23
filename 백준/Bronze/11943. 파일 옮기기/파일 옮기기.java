@@ -14,20 +14,11 @@ class Main{
         int max = 0;
         int v1 = a[0] + b[1];
         int v2 = a[1] + b[0];
-        
         if(v1>=v2){
             max = v2;
         }else{
             max = v1;
         }
-        
-        System.out.print(max);
-        
-        
-        
-        
-        
-        
-        
+        System.out.print(max);     
     }
 }
