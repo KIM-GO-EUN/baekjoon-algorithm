@@ -9,12 +9,11 @@ class Main{
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         StringBuilder sb = new StringBuilder();
         int[] piece = {1, 1, 2, 2, 2, 8};
-
         for(int i=0; i<6; i++){
-            sb.append(piece[i] - Integer.parseInt(st.nextToken()));
+            int n = Integer.parseInt(st.nextToken());
+            sb.append(piece[i] - n);
             sb.append(" ");
         }
-        
         System.out.print(sb);
     }
 }
