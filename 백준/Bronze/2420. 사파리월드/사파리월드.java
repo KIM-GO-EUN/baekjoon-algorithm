@@ -12,12 +12,7 @@ class Main{
         long n = Long.parseLong(st.nextToken());
         long m = Long.parseLong(st.nextToken());
         
-        if(n-m<0){
-            sb.append(-(n-m));
-        }else if(n-m>=0){
-            sb.append(n-m);
-        }
-        System.out.print(sb);
+		System.out.println(Math.abs(n-m));
         
     }
 }
