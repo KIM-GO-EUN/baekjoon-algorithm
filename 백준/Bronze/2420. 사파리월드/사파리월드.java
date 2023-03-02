@@ -9,8 +9,8 @@ class Main{
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         StringBuilder sb = new StringBuilder();
         
-        long n = Integer.parseInt(st.nextToken());
-        long m = Integer.parseInt(st.nextToken());
+        long n = Long.parseLong(st.nextToken());
+        long m = Long.parseLong(st.nextToken());
         
         if(n-m<0){
             sb.append(-(n-m));
