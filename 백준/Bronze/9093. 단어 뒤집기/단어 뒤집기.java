@@ -17,9 +17,8 @@ public class Main {
         for (int i = 0; i < t; i++) {
             str = br.readLine();
             st = new StringTokenizer(str, " ");
-            int strCnt = st.countTokens();
-            
-            for (int j=0; j<strCnt; j++) {
+           
+            while(st.hasMoreTokens()){
                 StringBuilder rvs = new StringBuilder(st.nextToken());
                 sb.append(rvs.reverse());
                 sb.append(" ");
