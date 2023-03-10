@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 public class Main {
 
@@ -9,23 +9,23 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        int T = 0;
-        String input = "";
-        T = Integer.parseInt(br.readLine());
+        int t = Integer.parseInt(br.readLine());
+        StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
+        String str = "";
 
-        for (int i = 0; i < T; i++) {
-            input = br.readLine();
-            String[] split = input.split(" ");
-            StringBuilder sb = new StringBuilder();
-
-            for (String s : split) {
-                StringBuilder reverse = new StringBuilder(s);
-                sb.append(reverse.reverse());
-                sb.append(' ');
+        for (int i = 0; i < t; i++) {
+            str = br.readLine();
+            st = new StringTokenizer(str, " ");
+            int strCnt = st.countTokens();
+            
+            for (int j=0; j<strCnt; j++) {
+                StringBuilder rvs = new StringBuilder(st.nextToken());
+                sb.append(rvs.reverse());
+                sb.append(" ");
             }
-
-            sb.deleteCharAt(sb.length() - 1);
-            System.out.println(sb);
+            sb.append("\n");
         }
+        System.out.println(sb);
     }
 }
