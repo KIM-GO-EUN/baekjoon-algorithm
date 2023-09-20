@@ -9,19 +9,18 @@ public class Main{
         StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-
         long[] s = new long[n+1];
+        StringBuilder sb = new StringBuilder();
         st = new StringTokenizer(br.readLine());
-        for (int i=1; i<=n; i++){
-            s[i] = s[i-1] + Integer.parseInt(st.nextToken());
+        for (int k=1; k<=n; k++){
+            s[k] = s[k-1] + Integer.parseInt(st.nextToken());
         }
-
         for(int q=0; q<m; q++){
             st = new StringTokenizer(br.readLine());
             int i = Integer.parseInt(st.nextToken());
             int j = Integer.parseInt(st.nextToken());
-            System.out.println(s[j]-s[i-1]);
+            sb.append(s[j] - s[i-1]).append("\n");
         }
-
+        System.out.println(sb);
     }
 }
